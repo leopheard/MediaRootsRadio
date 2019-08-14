@@ -14,8 +14,7 @@
     <platform>all</platform>
     <language>en_us</language>
     <summary lang="en">Media Roots Radio</summary>
-    <description lang="en">Media Roots is a citizen journalism project that reports the news from outside of party lines while providing a collaborative forum for conscious citizens, artists and activists to unite.<br>
-Since 2010 Media Roots Radio has been a non-partisan, radical political podcast focusing on foreign policy, the police state and social issues hosted by former Breaking the Set (RT) host / journalist Abby Martin and co-hosted by her brother / filmmaker (A Very Heavy Agenda) Robbie Martin. Conversational, controversial and at times passionate and explicit, Media Roots stands apart from the majority of podcasts coming from a similar political POV.</description>
+    <description lang="en">Media Roots is a citizen journalism project that reports the news from outside of party lines while providing a collaborative forum for conscious citizens, artists and activists to unite.</description>
     <license>The MIT License (MIT)</license>
     <forum></forum>
     <email>leopheard@gmail.com</email>
