@@ -15,7 +15,7 @@ get_soup("https://anchor.fm/s/5217eb0/podcast/rss")
 
 def get_playable_podcast(soup):
     """
-    @param: parsed html page            
+    @param: parsed html page
     """
     subjects = []
     for content in soup.find_all('item'):
