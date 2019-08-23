@@ -3,20 +3,13 @@ import re
 from bs4 import BeautifulSoup
 
 def get_soup(URL0):
-    """
-    @param: url of site to be scraped
-    """
     page = requests.get(URL0)
     soup = BeautifulSoup(page.text, 'html.parser')
     print("type: ", type(soup))
     return soup
 get_soup("https://anchor.fm/s/5217eb0/podcast/rss")
 
-
 def get_playable_podcast(soup):
-    """
-    @param: parsed html page
-    """
     subjects = []
     for content in soup.find_all('item'):
         try:        
@@ -39,13 +32,8 @@ def get_playable_podcast(soup):
         }
         subjects.append(item) 
     return subjects
-
 def compile_playable_podcast(playable_podcast):
-    """
-    @para: list containing dict of key/values pairs for playable podcasts
-    """
     items = []
-
     for podcast in playable_podcast:
         items.append({
             'label': podcast['title'],
@@ -57,11 +45,7 @@ def compile_playable_podcast(playable_podcast):
     return items
 
 def get_playable_podcast1(soup):
-    """
-    @param: parsed html page            
-    """
     subjects = []
-
     for content in soup.find_all('item', limit=7):
         try:        
             link = content.find('enclosure')
@@ -83,13 +67,8 @@ def get_playable_podcast1(soup):
         }
         subjects.append(item) 
     return subjects
-
 def compile_playable_podcast1(playable_podcast1):
-    """
-    @para: list containing dict of key/values pairs for playable podcasts
-    """
     items = []
-
     for podcast in playable_podcast1:
         items.append({
             'label': podcast['title'],
@@ -98,5 +77,4 @@ def compile_playable_podcast1(playable_podcast1):
 #            'info': podcast['desc'],
             'is_playable': True,
     })
-
     return items
